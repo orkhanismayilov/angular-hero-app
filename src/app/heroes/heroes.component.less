@@ -1,0 +1,53 @@
+@color-primary: #B4ADEA;
+@color-secondary: #59FFA0;
+@color-yellow: #FFED65;
+@color-gray: #50514F;
+
+h2{
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: fade(@color-secondary, 75%)
+        }
+        &.selected {
+            
+            .badge {
+                background: fade(@color-yellow, 35%) !important;
+            }
+        }
+
+        .badge{
+            display: block;
+            background: @color-primary;
+            float: left;
+            height: 100%;
+            margin-right: 5px;
+            padding: 0 5px;
+        }
+    }
+}
+
+.heroes-list-wrapper{
+    float: left;
+    width: 20%;
+    margin-right: 30px;
+}
+
+.heroes-editor-wrapper{
+    float: left;
+    width: 20%;
+}
